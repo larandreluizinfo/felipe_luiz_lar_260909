@@ -1,0 +1,12 @@
+# Windows / geral
+Thumbs.db
+Desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Temp
+*.tmp
+*.log
