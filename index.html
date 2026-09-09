@@ -3,10 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>felipe_luiz_lar_260909</title>
+  <title>O LABIRINTO — O Fugitivo, o Lobo e os Caçadores</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>felipe_luiz_lar_260909</h1>
-  <p>Site publicado via GitHub Pages.</p>
+  <main class="container">
+    <header>
+      <h1>🌀 O LABIRINTO</h1>
+      <p class="subtitulo">O <strong>Fugitivo</strong> precisa pegar <strong>todas as moedas</strong> e fugir do <strong>Lobo</strong> e dos <strong>Caçadores</strong>!</p>
+    </header>
+
+    <section class="hud">
+      <div class="placar">
+        <span>🪙 <b id="moedas">0/0</b></span>
+        <span>❤️ <b id="vidas">3</b></span>
+        <span>⏱️ <b id="tempo">0s</b></span>
+        <span>🏆 <b id="recorde">—</b></span>
+      </div>
+      <div class="acoes">
+        <button id="btnReiniciar" type="button">🔄 Reiniciar</button>
+        <button id="btnPausar" type="button">⏸️ Pausar</button>
+      </div>
+    </section>
+
+    <section class="palco">
+      <canvas id="jogo" width="510" height="390" aria-label="Labirinto do jogo"></canvas>
+      <div id="mensagem" class="mensagem escondido"></div>
+    </section>
+
+    <section class="legenda">
+      <span>🏃 Fugitivo (você)</span>
+      <span>🐺 Lobo (persegue)</span>
+      <span>🏹 Caçadores (patrulham)</span>
+      <span>🪙 Moeda</span>
+      <span>🧱 Parede</span>
+    </section>
+
+    <section class="controles" aria-label="Controles no celular">
+      <div class="dpad">
+        <button data-dir="cima" type="button">⬆️</button>
+        <div class="linha">
+          <button data-dir="esquerda" type="button">⬅️</button>
+          <button data-dir="baixo" type="button">⬇️</button>
+          <button data-dir="direita" type="button">➡️</button>
+        </div>
+      </div>
+      <p class="dica">PC: setas ou WASD · Celular: botões acima · Objetivo: pegar TODAS as moedas sem ser pego!</p>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
 </body>
 </html>
