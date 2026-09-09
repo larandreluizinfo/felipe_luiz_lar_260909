@@ -1,4 +1,4 @@
-// O LABIRINTO — Fugitivo x Lobo x Caçadores
+// O LABIRINTO — Ovelha x Lobo x Caçadores
 // Objetivo: pegar TODAS as moedas sem ser pego.
 // Controles: setas / WASD + botões na tela.
 
@@ -88,7 +88,7 @@ function proximoPassoBFS(deX, deY, paraX, paraY) {
 }
 
 function alcancaveisDo(inicio) {
-  // Flood-fill para garantir que só colocamos moedas onde o Fugitivo chega.
+  // Flood-fill para garantir que só colocamos moedas onde a Ovelha chega.
   const vistos = new Set([inicio.x + "," + inicio.y]);
   const fila = [inicio];
   while (fila.length) {
@@ -290,7 +290,7 @@ function vencer() {
   estado.venceu = true;
   salvarRecorde(estado.segundos);
   mostrarMensagem(
-    "<div>🎉 <b>VOCÊ VENCEU!</b><br>O Fugitivo pegou todas as " + estado.totalMoedas + " moedas em " + estado.segundos + "s!<br><br><button id='btnJogar' type='button'>▶️ Jogar de novo</button></div>"
+    "<div>🎉 <b>VOCÊ VENCEU!</b><br>A Ovelha pegou todas as " + estado.totalMoedas + " moedas em " + estado.segundos + "s!<br><br><button id='btnJogar' type='button'>▶️ Jogar de novo</button></div>"
   );
   ligarBotaoJogar();
 }
@@ -299,7 +299,7 @@ function perder() {
   estado.terminado = true;
   const pegas = estado.totalMoedas - estado.moedas.size;
   mostrarMensagem(
-    "<div>🐺 <b>FIM DE JOGO!</b><br>O Lobo e os Caçadores pegaram o Fugitivo.<br>Moedas: " + pegas + "/" + estado.totalMoedas + "<br><br><button id='btnJogar' type='button'>🔄 Tentar de novo</button></div>"
+    "<div>🐺 <b>FIM DE JOGO!</b><br>O Lobo e os Caçadores pegaram a Ovelha.<br>Moedas: " + pegas + "/" + estado.totalMoedas + "<br><br><button id='btnJogar' type='button'>🔄 Tentar de novo</button></div>"
   );
   ligarBotaoJogar();
 }
@@ -342,7 +342,7 @@ function desenhar(tempoMs) {
   ctx.font = "20px serif";
   for (const c of estado.cacadores) ctx.fillText("🏹", c.x * TILE + TILE / 2, c.y * TILE + TILE / 2 + 1);
   ctx.fillText("🐺", estado.lobo.x * TILE + TILE / 2, estado.lobo.y * TILE + TILE / 2 + 1);
-  ctx.fillText("🏃", estado.jogador.x * TILE + TILE / 2, estado.jogador.y * TILE + TILE / 2 + 1);
+  ctx.fillText("🐑", estado.jogador.x * TILE + TILE / 2, estado.jogador.y * TILE + TILE / 2 + 1);
 }
 
 // Loop com ticks diferentes por personagem

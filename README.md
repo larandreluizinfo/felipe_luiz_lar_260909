@@ -1,6 +1,6 @@
 # O LABIRINTO — felipe_luiz_lar_260909
 
-Jogo **O LABIRINTO**: o **Fugitivo 🏃** precisa pegar **TODAS as moedas 🪙** sem ser pego pelo **Lobo 🐺** (persegue) e pelos **Caçadores 🏹** (patrulham).
+Jogo **O LABIRINTO**: a **Ovelha 🐑** precisa pegar **TODAS as moedas 🪙** sem ser pega pelo **Lobo 🐺** (persegue) e pelos **Caçadores 🏹** (patrulham).
 
 Jogue online: https://larandreluizinfo.github.io/felipe_luiz_lar_260909/
 
